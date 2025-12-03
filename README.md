@@ -8,8 +8,8 @@
 
 **Under-Review**
 
-<a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/Project_Page-MIRAGE-blue' alt='Project Page'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/arXiv-MIRAGE-red' alt='ArXiv Link'></a>
+<a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/TIDY-Project_Page-blue' alt='Project Page'></a>
+<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-arXiv-red' alt='ArXiv Link'></a>
 <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow' alt='Weights'></a>
 <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-green' alt='SCaN-TIR Dataset'></a>
 </div>
