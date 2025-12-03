@@ -8,10 +8,10 @@
 
 **Under-Review**
 
-<a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/TIDY-Project_Page-blue' alt='Project Page'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-arXiv-red' alt='ArXiv Link'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow' alt='Weights'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-green' alt='SCaN-TIR Dataset'></a>
+<a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/TIDY-Project_Page-blue?logo=github' alt='Project Page'></a>
+<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv' alt='ArXiv Link'></a>
+<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow?logo=huggingface' alt='Weights'></a>
+<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-green?logo=googledrive' alt='SCaN-TIR Dataset'></a>
 </div>
 
 
