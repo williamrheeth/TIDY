@@ -1,5 +1,14 @@
 <div align="center">
-<h1>TIDY: Thermal Infrared Image Denoising via Wavelet Domain Entropy and Directional Stripe Index</h1>
+  <p align="center">
+  <img src="assets/logo.png" width="150">
+</p>
+  
+<h1>
+  <b>TIDY</b> :
+  Thermal Infrared Image Denoising via <br>
+  Wavelet Domain Entropy and Directional Stripe Index
+</h1>
+
 
 [**Tai Hyoung Rhee**](https://scholar.google.com/citations?user=PF8EfdYAAAAJ&hl=en&oi=ao)<sup>1</sup> · [**Dong-Guw Lee**](https://scholar.google.com/citations?user=u6VDnlgAAAAJ&hl=ko)<sup>1</sup> · [**Ayoung Kim**](https://ayoungk.github.io/)<sup>1&dagger;</sup>
 
@@ -18,244 +27,66 @@
 
 ## News
 - ⚡(2025-12-03): TIDY repo opening
----
 
-![mirage_fig1](assets/logo.png)
+  
+<hr />
+
+> **Abstract:** *Thermal infrared (TIR) imaging enhances robotic perception in adverse conditions but is fundamentally degraded by severe structured and random noise. Existing denoising methods not only depend on self-supervision via synthetic noise resulting in poor generalization, but also employ computationally heavy models that are impractical for real-time robotics. We address both limitations with TIDY via explicitly exploiting the wavelet domain in a novel manner: by leveraging wavelet entropy with a novel directional stripe index into the loss function with wavelet transform as an encoder/decoder, it isolates stochastic noise and orientation-specific stripe artifacts, achieving 20–30% improvements in PSNR and SSIM compared to the strongest baselines, while reducing computational complexity by an order of magnitude. To enable supervised learning on real sensor noise, we further introduce SCaN-TIR, the first real stereo clean-noisy paired dataset. Extensive evaluations show that TIDY not only delivers state-of-the-art denoising, even in zero-shot conditions, but also substantially enhances downstream robotics tasks such as thermal inertial odometry and monocular depth estimation, all while sustaining real-time efficiency. Both TIDY and the SCaN-TIR dataset will be publicly released..* 
+<hr />
+
+## TIDY & SCaN-TIR Overview
 
 
+### Model Architecture
 
-🚀 **Introducing <ins>547k Aligned</ins> RGB-TIR Dataset featuring:**
-
-- 🚙 **Platform Diversity**: CCTV, Car, Drone, Handheld Devices
-- 🏙️ **Scene Diversity**: Urban/Suburban, Indoor/Outdoor
-- 🌗 **Temporal Diversity**: Day, Noon, Night
-- 🌦 **Environmental Diversity**: Season, Weather
-<br><br>
-- 🎞 **Flexible Tone-Mapping**: Offering both 8-bit & 14-bit TIR Images
-- 📊 **Extensive Benchmarks**: Evaluation of state-of-the-art GAN and diffusion models
-
----
-
-## TIDY Overview
+![representatives](assets/model.jpg)
 
 ### Dataset Overview Table
 
 <details>
   <summary>Click to Expand</summary>
 
-<table style="border-collapse: collapse; width: 100%;">
+<table style="border-collapse: collapse; width: 80%;">
   <tr>
-    <th style="border-bottom: 2px solid black;">Category</th>
-    <th style="border-bottom: 2px solid black;">Dataset</th>
-    <th style="border-bottom: 2px solid black;">Train</th>
-    <th style="border-bottom: 2px solid black;">Test</th>
-    <th style="border-bottom: 2px solid black;">Extra</th>
+    <th style="border-bottom: 2px solid black;">Sequence</th>
+    <th style="border-bottom: 2px solid black;"># Image Pairs</th>
+    <th style="border-bottom: 2px solid black;">Duration</th>
     <th style="border-bottom: 2px solid black;">Scene</th>
-    <th style="border-bottom: 2px solid black;">Weather</th>
-    <th style="border-bottom: 2px solid black;">Season</th>
-    <th style="border-bottom: 2px solid black;">Location</th>
-    <th style="border-bottom: 2px solid black;">Avg. Resolution</th>
   </tr>
 
-  <tr style="font-size:90%">
-    <td rowspan="8" style="border-right: 1px solid black;">Outdoor</td>
-    <td>MS²</td>
-    <td>93,746</td>
-    <td>18,896</td>
-    <td>84,358</td>
-    <td>Campus, Urban, Residential</td>
-    <td>Clear, Cloudy, Rainy</td>
-    <td>Summer</td>
-    <td>Korea</td>
-    <td>544 × 191</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>STHeReO</td>
-    <td>46,437</td>
-    <td>9,745</td>
-    <td></td>
-    <td>Campus, Suburban</td>
-    <td>Clear</td>
-    <td>Summer</td>
-    <td>Korea</td>
-    <td>601 × 245</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>ViViD</td>
-    <td>35,796</td>
-    <td>14,597</td>
-    <td></td>
-    <td>Campus</td>
-    <td>Clear, Cloudy</td>
-    <td>Spring</td>
-    <td>Korea</td>
-    <td>629 × 497</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>NSAVP</td>
-    <td>65,333</td>
-    <td>78,823</td>
-    <td></td>
-    <td>Urban, Suburban</td>
-    <td>Clear, Cloudy</td>
-    <td>Summer</td>
-    <td>Korea</td>
-    <td>640 × 512</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>CAMEL (Outdoor)</td>
-    <td>8,581</td>
-    <td>4,482</td>
-    <td></td>
-    <td>Campus, Road, Urban</td>
-    <td>Clear, Cloudy, Snow</td>
-    <td>Spring, Fall, Winter</td>
-    <td>USA</td>
-    <td>404 × 230</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>TRI2I</td>
-    <td>19,768</td>
-    <td>11,913</td>
-    <td></td>
-    <td>Campus, Road</td>
-    <td>Clear, Cloudy</td>
-    <td>Spring, Summer</td>
-    <td>USA</td>
-    <td>229 × 228</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>METU-VisTIR</td>
-    <td>33</td>
-    <td>1,052</td>
-    <td></td>
-    <td>Campus</td>
-    <td>Clear</td>
-    <td></td>
-    <td>Turkey</td>
-    <td>632 × 497</td>
-  </tr>
+  <tr><td><code>300_floor5</code></td><td>494</td><td>19.8s</td><td>Indoor</td></tr>
+  <tr><td><code>300_to_303</code></td><td>4,698</td><td>187s</td><td>Outdoor</td></tr>
+  <tr><td><code>301_118</code></td><td>4,329</td><td>173s</td><td>Indoor</td></tr>
+  <tr><td><code>301_floor1</code></td><td>4,548</td><td>183s</td><td>Indoor</td></tr>
+  <tr><td><code>301_floor12</code></td><td>5,973</td><td>241s</td><td>Indoor</td></tr>
+  <tr><td><code>303_floor2</code></td><td>3,287</td><td>131s</td><td>Indoor</td></tr>
+  <tr><td><code>303_floor5</code></td><td>3,045</td><td>121s</td><td>Indoor</td></tr>
+  <tr><td><code>303_floor7</code></td><td>3,799</td><td>151s</td><td>Indoor</td></tr>
+  <tr><td><code>303_bridge</code></td><td>2,217</td><td>88s</td><td>Outdoor</td></tr>
+  <tr><td><code>test_300</code></td><td>132</td><td>5.3s</td><td>Indoor</td></tr>
+  <tr><td><code>test_303</code></td><td>55</td><td>2.2s</td><td>Indoor</td></tr>
 
   <tr>
-    <td><i>MIRAGE Outdoor</i></td>
-    <td>269,694</td>
-    <td>139,508</td>
-    <td>84,358</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><b>Total</b></td>
+    <td><b>32,577</b></td>
     <td></td>
     <td></td>
   </tr>
-
-  <tr style="font-size:90%">
-    <td rowspan="5" style="border-right: 1px solid black;">Indoor</td>
-    <td>Trimodal</td>
-    <td>4,550</td>
-    <td>2,653</td>
-    <td></td>
-    <td>Room</td>
-    <td></td>
-    <td></td>
-    <td>Austria</td>
-    <td>640 × 480</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>MultiSpectralMotion</td>
-    <td>11,575</td>
-    <td>5,777</td>
-    <td>3,647</td>
-    <td>Room</td>
-    <td></td>
-    <td></td>
-    <td>China</td>
-    <td>640 × 480</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>OdomBeyondVision</td>
-    <td>20,904</td>
-    <td>4,372</td>
-    <td></td>
-    <td>Room</td>
-    <td></td>
-    <td></td>
-    <td>UK</td>
-    <td>328 × 249</td>
-  </tr>
-
-  <tr style="font-size:90%">
-    <td>CAMEL (Indoor)</td>
-    <td>221</td>
-    <td>117</td>
-    <td></td>
-    <td>Hall</td>
-    <td></td>
-    <td></td>
-    <td>USA</td>
-    <td>404 × 230</td>
-  </tr>
-
-  <tr>
-    <td><i>MIRAGE Indoor</i></td>
-    <td>37,250</td>
-    <td>12,919</td>
-    <td>88,005</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Total</td>
-    <td><b>MIRAGE</b></td>
-    <td>306,944</td>
-    <td>152,427</td>
-    <td>88,005</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td><b>MIRAGE Raw</b></td>
-    <td>278,341</td>
-    <td>130,491</td>
-    <td>88,005</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-
 </table>
-
-- MIRAGE Raw represents the data pairs providing both 8-bit and raw 14-bit TIR
 </details>
 
-### Example Visualizations of each Dataset Sequence in MIRAGE (Left: RGB / Right: TIR)
 
-![representatives](assets/MIRAGE_samples.png)
+### Zero-shot Results
 
+![zeroshot](assets/results_zeroshot.jpg)
 
-### Comparison with Other Datasets
+### Downstream Enhancement
 
-![comparison](assets/dataset_comparison.png)
+- Thermal-Inertial Odometry based on VINS-Mono
+![results_from_vins_mono](assets/results_from_vins_mono.jpg)
 
-MIRAGE not only surpasses existing datasets in terms of scale and diversity, but also provides 8-bit & 14-bit TIR images.
+- Monocular Depth Estimation based on Depth Anything V2
+![results_depth](assets/results_depth.jpg)
 
 ---
 
@@ -270,15 +101,14 @@ Refer to the link below for dataset download.
 ## Dataset Structure
 
 ```
-  MIRAGE
-  ├── {$DATASET_NAME}
-  |   └── {$SEQUENCE_NAME}
-  |       ├── RGB
-  |       |   ├── 1.jpg
-  |       |   └── ...
-  |       └── TIR
-  |           ├── 1.jpg
-  |           └── ...
+  SCaN-TIR
+  ├── {$SEQUENCE_NAME}
+  |   ├── Clean
+  |   |   ├── 0.png
+  |   |   └── ...
+  |   └── Noisy
+  |       ├── 0.png
+  |       └── ...
   ├── ...
   ├── ViVID
   |   ├── img_campus_day1
