@@ -37,11 +37,11 @@
 ## TIDY & SCaN-TIR Overview
 
 
-### Model Architecture
+### Network Architecture
 
 ![representatives](assets/model.jpg)
 
-### Dataset Overview Table
+### SCaN-TIR Dataset Overview Table
 
 <details>
   <summary>Click to Expand</summary>
@@ -78,23 +78,37 @@
 
 ### Zero-shot Results
 
+<details>
+  <summary>Click to Expand</summary>
 ![zeroshot](assets/results_zeroshot.jpg)
+</details>
 
 ### Downstream Enhancement
 
 - Thermal-Inertial Odometry based on VINS-Mono
-![results_from_vins_mono](assets/results_from_vins_mono.jpg)
+> <details>
+>   <summary>Click to Expand</summary>
+> 
+>   <img src="assets/results_from_vins_mono.jpg" />
+> 
+> </details>
+
 
 - Monocular Depth Estimation based on Depth Anything V2
-![results_depth](assets/results_depth.jpg)
+> <details>
+>   <summary>Click to Expand</summary>
+> ![results_depth](assets/results_depth.jpg)
+> </details>
 
 ---
 
-## Download
+## Installation
 
-Refer to the link below for dataset download.
+Refer to the link below for download.
 
 [Google Drive](https://rpm.snu.ac.kr/)
+
+Docker.
 
 ---
 
