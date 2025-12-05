@@ -20,7 +20,7 @@
 - ⚡(2025-12-03): TIDY repo opening
 ---
 
-![mirage_fig1](https://github.com/user-attachments/assets/89c467af-b9d4-4fad-91f3-43d13f31c06c)
+![mirage_fig1](assets/logo.png)
 
 
 
