@@ -17,16 +17,20 @@
 
 **IROS 2026**
 
-<a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github' alt='Project Page'></a>
+<a href='https://github.com/williamrheeth/TIDY/'><img src='https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github' alt='Project Page'></a>
 <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv' alt='ArXiv Link'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow?logo=huggingface' alt='Weights'></a>
-<a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-blue?logo=googledrive' alt='SCaN-TIR Dataset'></a>
+<a href="https://huggingface.co/datasets/williamrhee/SCaN-TIR"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-yellow?logo=huggingface' alt='SCaN-TIR Dataset'></a>
+<!-- <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow?logo=huggingface' alt='Weights'></a> -->
 </div>
 
 
 
+
 ## News
-- ⚡(2026-06-18): TIDY repo opening
+- ⚡ (2026-06-02): TIDY repo opening
+- 🎉 (2026-06-17): Paper accepted to IROS 2026
+- 📦 (2026-06-19): SCaN-TIR dataset released
+
 
   
 <hr />
@@ -94,7 +98,7 @@
 > </details>
 
 
-- Monocular Depth Estimation based on Depth Anything V2
+- Monocular Depth Estimation based on Depth Anything V3
 > <details>
 >   <summary>Click to Expand</summary>
 > ![results_depth](assets/results_depth.jpg)
@@ -102,13 +106,25 @@
 
 ---
 
-## Installation
+## Downloading SCaN-TIR
 
-Refer to the link below for download.
+The SCaN-TIR dataset is hosted on Hugging Face:
 
-[Google Drive](https://rpm.snu.ac.kr/)
+**Dataset:** https://huggingface.co/datasets/williamrhee/SCaN-TIR
 
-Docker.
+Install the Hugging Face CLI:
+
+```bash
+pip install -U "huggingface_hub[cli]"
+```
+
+Download the dataset:
+
+```bash
+huggingface-cli download williamrhee/SCaN-TIR \
+    --repo-type dataset \
+    --local-dir SCaN-TIR
+```
 
 ---
 
@@ -138,17 +154,6 @@ Docker.
 
 ---
 
-
-## TODO List
-
-- [x] Open git repository
-- [ ] Upload dataset
-- [ ] Upload curation framework
-- [ ] add more baselines
-
-
----
-
 ## Citation
 If you found our work useful, please cite
 ```
@@ -160,5 +165,4 @@ If you found our work useful, please cite
   organization={IEEE}
 }
 
-}
 ```
