@@ -26,7 +26,7 @@
 
 
 ## News
-- ⚡(2026-06-018): TIDY repo opening
+- ⚡(2026-06-18): TIDY repo opening
 
   
 <hr />
