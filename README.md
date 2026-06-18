@@ -15,7 +15,7 @@
 <sup>1</sup>Seoul National University
 
 
-**Under-Review**
+**IROS 2026**
 
 <a href='https://williamrheeth.github.io/mirage_web/'><img src='https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github' alt='Project Page'></a>
 <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv' alt='ArXiv Link'></a>
@@ -26,12 +26,12 @@
 
 
 ## News
-- ⚡(2025-12-03): TIDY repo opening
+- ⚡(2026-06-018): TIDY repo opening
 
   
 <hr />
 
-> **Abstract:** *Thermal infrared (TIR) imaging enhances robotic perception in adverse conditions but is fundamentally degraded by severe structured and random noise. Existing denoising methods not only depend on self-supervision via synthetic noise resulting in poor generalization, but also employ computationally heavy models that are impractical for real-time robotics. We address both limitations with TIDY via explicitly exploiting the wavelet domain in a novel manner: by leveraging wavelet entropy with a novel directional stripe index into the loss function with wavelet transform as an encoder/decoder, it isolates stochastic noise and orientation-specific stripe artifacts, achieving 20–30% improvements in PSNR and SSIM compared to the strongest baselines, while reducing computational complexity by an order of magnitude. To enable supervised learning on real sensor noise, we further introduce SCaN-TIR, the first real stereo clean-noisy paired dataset. Extensive evaluations show that TIDY not only delivers state-of-the-art denoising, even in zero-shot conditions, but also substantially enhances downstream robotics tasks such as thermal inertial odometry and monocular depth estimation, all while sustaining real-time efficiency. Both TIDY and the SCaN-TIR dataset will be publicly released..* 
+> **Abstract:** *Thermal infrared (TIR) imaging has been a popular choice for field robotics due to its robust perception capability under low light visual degradation, but it suffers from severe stochastic and fixed-pattern noise that breaks downstream estimation. This noise is intensified indoors due to low thermal contrast and uniform temperature distributions, contributing to the relative lack of indoor TIR deployments. Existing TIR denoising methods exhibit a poor accuracy-efficiency tradeoff, either too slow for online deployment required in robotics or insufficiently robust to severe degradation, while typically being trained on synthetic noise. Addressing these problems, we propose TIDY, a lightweight wavelet-domain denoiser trained on real clean-noisy TIR data. By reformulating TIR denoising in the wavelet domain, TIDY explicitly disentangles noise from structural content, enabling targeted suppression with reduced spatial complexity, significantly improving inference speed over prior methods (~34Hz). TIDY introduces two new metrics, Wavelet Entropy and Wavelet Directional Stripe Index, as complementary loss terms to explicitly suppress stochastic noise and stripe artifacts. Across severe indoor corruption and zero-shot settings, TIDY improves robustness and yields consistent gains in downstream robotics tasks including thermal inertial odometry and monocular depth estimation.* 
 <hr />
 
 ## TIDY & SCaN-TIR Overview
@@ -138,42 +138,6 @@ Docker.
 
 ---
 
-## Benchmark Evaluation
-
-### State-of-the-Art Image Translation Model Evaluation
-
-#### RGB-to-TIR ###
-<details>
-  <summary>Click to Expand</summary>
-
-It's a gif file. Changes every 5 seconds
-  
-![rgb2tir](https://github.com/user-attachments/assets/c17ff001-8e35-43eb-be29-6d643d114854)
-
-</details>
-
-#### TIR-to-RGB ###
-
-<details>
-  <summary>Click to Expand</summary>
-
-It's a gif file. Changes every 5 seconds
-  
-![tir2rgb](https://github.com/user-attachments/assets/ccfbfe0f-2bf8-4134-8183-b51197c03487)
-
-</details>
-
-### Zero-shot Performance of MIRAGE
-
-<details>
-  <summary>Click to Expand</summary>
-  
-Zero-shot performance of PID trained on MIRAGE in comparison to PID trained with other benchmarks
-  
-![zero_shot](https://github.com/user-attachments/assets/b99b2a94-0e03-431a-b583-f403c252e92d)
-
-</details>
-
 
 ## TODO List
 
@@ -188,11 +152,12 @@ Zero-shot performance of PID trained on MIRAGE in comparison to PID trained with
 ## Citation
 If you found our work useful, please cite
 ```
-@inproceedings{mirage2025,
-title={MIRAGE: Large-Scale Aligned RGB-Thermal Infrared Dataset for Scalable Multispectral Translation},
-  author={Lee, Dong-Guw and Jang, Hyunsoo and Rhee, TaiHyoung and Shin, UkCheol and Kim, Ayoung},
-  booktitle={ArXiv},
-  year={2025}
+@inproceedings{rhee2026tidy,
+  title={TIDY: Thermal Infrared Image Denoising via Wavelet Domain Entropy and Directional Stripe Index},
+  author={Rhee, Tai Hyoung and Lee, Dong-guw and Kim, Ayoung},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026},
+  organization={IEEE}
 }
 
 }
