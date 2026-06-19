@@ -133,22 +133,18 @@ huggingface-cli download williamrhee/SCaN-TIR \
 ```
   SCaN-TIR
   ├── {$SEQUENCE_NAME}
-  |   ├── Clean
-  |   |   ├── 0.png
+  |   ├── left_clean
+  |   |   ├── frame_00000.png
   |   |   └── ...
-  |   └── Noisy
-  |       ├── 0.png
+  |   ├── right_noisy
+  |   |   ├── frame_00000.png
+  |   |   └── ...
+  |   ├── thermal_14bit_left_image_raw
+  |   |   ├── frame_00000.png
+  |   |   └── ...
+  |   └── thermal_14bit_right_image_raw
+  |       ├── frame_00000.png
   |       └── ...
-  ├── ...
-  ├── ViVID
-  |   ├── img_campus_day1
-  |   |   ├── RGB
-  |   |   |   ├── 000001.png
-  |   |   |   └── ...
-  |   |   └── TIR
-  |   |       ├── 000001.png
-  |   |       └── ...
-  |   ├── ...
   ├── ...
   ```
 
