@@ -20,6 +20,10 @@
 <a href='https://github.com/williamrheeth/TIDY/'><img src='https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github' alt='Project Page'></a>
 <a href="https://arxiv.org/abs/2606.19813"><img src='https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv' alt='ArXiv Link'></a>
 <a href="https://huggingface.co/datasets/williamrhee/SCaN-TIR"><img src='https://img.shields.io/badge/SCaN--TIR-Dataset-yellow?logo=huggingface' alt='SCaN-TIR Dataset'></a>
+<a href="https://youtu.be/PxcEG1ayDKE">
+  <img src="https://img.shields.io/badge/TIDY-Video-darkred?logo=youtube" alt="Video">
+</a>
+
 <!-- <a href="https://rpm.snu.ac.kr"><img src='https://img.shields.io/badge/TIDY-Weights-yellow?logo=huggingface' alt='Weights'></a> -->
 </div>
 
