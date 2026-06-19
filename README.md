@@ -164,5 +164,4 @@ If you found our work useful, please cite
   year={2026},
   organization={IEEE}
 }
-
 ```
