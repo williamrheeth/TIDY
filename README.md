@@ -18,12 +18,13 @@
   <p><strong>IROS 2026</strong></p>
 
   <p>
-    <a href="https://github.com/williamrheeth/TIDY/"><img src="https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github" alt="Project page"></a>
-    <a href="https://arxiv.org/abs/2606.19813"><img src="https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv" alt="arXiv paper"></a>
-    <a href="https://huggingface.co/datasets/williamrhee/SCaN-TIR"><img src="https://img.shields.io/badge/SCaN--TIR-Dataset-yellow?logo=huggingface" alt="SCaN-TIR dataset"></a>
-    <a href="https://youtu.be/PxcEG1ayDKE"><img src="https://img.shields.io/badge/TIDY-Video-darkred?logo=youtube" alt="Project video"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey?logo=creativecommons" alt="CC BY-NC 4.0 license"></a>
-  </p>
+  <a href="https://github.com/williamrheeth/TIDY/"><img src="https://img.shields.io/badge/TIDY-Project_Page-purple?logo=github" alt="Project page"></a>
+  <a href="https://arxiv.org/abs/2606.19813"><img src="https://img.shields.io/badge/TIDY-arXiv-red?logo=arxiv" alt="arXiv paper"></a>
+  <a href="https://drive.google.com/file/d/1C0qBxbgoZjGgQ6WFHB5QBsyl6ZQD53h2/view?usp=sharing"><img src="https://img.shields.io/badge/TIDY-Checkpoints-34A853?labelColor=grey&logo=googledrive&logoColor=white" alt="TIDY checkpoints"></a>
+  <a href="https://huggingface.co/datasets/williamrhee/SCaN-TIR"><img src="https://img.shields.io/badge/SCaN--TIR-Dataset-yellow?logo=huggingface" alt="SCaN-TIR dataset"></a>
+  <a href="https://youtu.be/PxcEG1ayDKE"><img src="https://img.shields.io/badge/TIDY-Video-darkred?logo=youtube" alt="Project video"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey?logo=creativecommons" alt="CC BY-NC 4.0 license"></a>
+</p>
 
   <p>A lightweight wavelet-domain network for fast and robust thermal infrared image denoising.</p>
 </div>
@@ -33,7 +34,7 @@
 - ⚡ (2026-06-02): The TIDY repository was released.
 - 🎉 (2026-06-17): TIDY was accepted to IROS 2026.
 - 📦 (2026-06-19): The SCaN-TIR dataset was released.
-- 💻 (2026-07-20): TIDY code released.
+- 💻 (2026-09-25): TIDY code & weights released.
 
 <hr />
 
@@ -156,16 +157,11 @@ The default checkpoint location is:
 ```text
 weights/tidy.pth
 ```
+The pretrained TIDY checkpoint can be downloaded from Google Drive:
 
-Download `tidy.pth` from the **Assets** section of the latest [GitHub Release](https://github.com/williamrheeth/TIDY/releases), then place it in `weights/`. The checkpoint is approximately 443 MiB and is distributed separately from the source code.
+https://drive.google.com/file/d/1C0qBxbgoZjGgQ6WFHB5QBsyl6ZQD53h2/view?usp=sharing
 
-Once the release and checkpoint asset are published, you can also download it from the repository root with:
-
-```bash
-mkdir -p weights
-curl -fL https://github.com/williamrheeth/TIDY/releases/latest/download/tidy.pth \
-  -o weights/tidy.pth
-```
+Download tidy.pth then place it in `weights/`. The checkpoint is approximately 443 MiB and is distributed separately from the source code.
 
 You can also keep the checkpoint elsewhere and pass `--checkpoint /path/to/tidy.pth` when running inference.
 
